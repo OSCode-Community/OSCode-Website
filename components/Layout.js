@@ -17,7 +17,7 @@ const Layout = (props) => {
           <Toolbar>
             <Avatar
               src="/logo.jpeg"
-              alt="oescode logo"
+              alt="oscode logo"
               sx={{
                 width: "50px",
                 height: "50px",
@@ -59,9 +59,25 @@ const Layout = (props) => {
                 Events
               </Button>
             </Link>
+            <Link href="/contact">
+              <Button edge="end" sx={{ mx: 1 }} variant="outlined"> Contact Us </Button> 
+            </Link>
           </Toolbar>
         </AppBar>
         <main style={{ paddingTop: "60px" }}>{props.children}</main>
+
+        <footer className={classes.footer}>
+          <Typography variant="h6" align="center" gutterBottom>
+            OS Code
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            component="p"
+          >
+            © {new Date().getFullYear()}, Made by Team OS Code
+          </Typography>
+        </footer>
       </Box>
     </>
   );
