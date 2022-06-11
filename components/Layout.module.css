@@ -1,0 +1,29 @@
+.appBarBg {
+  background: rgba(22, 21, 21, 0.35);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.btn {
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #00c9ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #92fe9d,
+    #00c9ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #92fe9d,
+    #00c9ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-animation: btn 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: btn 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
