@@ -76,16 +76,15 @@ const Layout = (props) => {
               anchor="right"
               open={isDrawerOpen}
               onClose={() => setIsDrawerOpen(false)}
-              sx={{ display: { sx: "flex", md: "none" } }}
+              sx={{ display: { sx: "static", md: "none" }}}
             >
-              <Box p={2} textAlign="center" role="presentation">
+              <Box p={2} textAlign="center" width='280px' role="presentation" sx={{ flexDirection: "column"}}>
                 {navItems.map((item) => (
                   <Link href={item.href} key={item.title}>
                     <Button
                       color="inherit"
                       edge="end"
                       sx={{ mx: 1 }}
-                      className={classes.btn}
                     >
                       {item.title}
                     </Button>
