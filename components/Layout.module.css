@@ -1,5 +1,6 @@
 .bG {
-  background-image: url("/headerbg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/headerbg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -37,7 +38,11 @@
 }
 .footer {
   color: aliceblue;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(6, 111, 113) 0.1%, rgba(0,94,120,1) 94.2% );
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(6, 111, 113) 0.1%,
+    rgba(0, 94, 120, 1) 94.2%
+  );
   padding-top: 5px;
   padding-bottom: 5px;
 }
