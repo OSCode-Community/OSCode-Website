@@ -69,7 +69,7 @@ const Layout = (props) => {
                 </Button>
               </Link>
             </div>
-            <IconButton size="large" edge="start" color="inherit" aria-label="logo" onClick={() => setIsDrawerOpen(true)}>
+            <IconButton size="large" edge="start" color="inherit" aria-label="logo" onClick={() => setIsDrawerOpen(true)} sx={{ display: { sx: "static", lg: "none" }}}>
               <MenuIcon />
             </IconButton>
             <Drawer
