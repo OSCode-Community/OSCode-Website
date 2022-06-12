@@ -10,6 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import CloseIcon from "@mui/icons-material/Close";
 import { IconButton } from "@mui/material";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -25,17 +26,17 @@ const Layout = (props) => {
   const navItems = [
     {
       title: "Home",
-      icon: <HomeIcon />,
+      icon: <HomeIcon color="primary" />,
       path: "/",
     },
     {
       title: "About Us",
-      icon: <InfoIcon />,
+      icon: <InfoIcon color="primary" />,
       path: "/about",
     },
     {
       title: "Events",
-      icon: <EmojiEventsIcon />,
+      icon: <EmojiEventsIcon color="primary" />,
       path: "/events",
     },
   ];
@@ -96,7 +97,16 @@ const Layout = (props) => {
               open={isDrawerOpen}
               onClose={() => setIsDrawerOpen(false)}
               sx={{ display: { sx: "static", md: "none" } }}
+              PaperProps={{
+                className: classes.drawer,
+              }}
             >
+              <IconButton
+                onClick={() => setIsDrawerOpen(false)}
+                sx={{ mt: "10px" }}
+              >
+                <CloseIcon color="primary" />
+              </IconButton>
               <Box
                 p={2}
                 textAlign="center"
@@ -112,7 +122,10 @@ const Layout = (props) => {
                       onClick={() => router.push(item.path)}
                     >
                       <ListItemIcon>{item.icon}</ListItemIcon>
-                      <ListItemText primary={item.title} sx= {{ alignItems: "center" }} />
+                      <ListItemText
+                        primary={item.title}
+                        sx={{ alignItems: "center" }}
+                      />
                     </ListItem>
                   ))}
                 </List>
@@ -126,7 +139,13 @@ const Layout = (props) => {
             </Drawer>
           </Toolbar>
         </AppBar>
-        <main style={{ paddingTop: "60px", minHeight: "screen" }}>
+        <main
+          style={{
+            paddingTop: "4.3rem",
+            paddingBottom: "4rem",
+            minHeight: "52.3rem",
+          }}
+        >
           {props.children}
         </main>
 
