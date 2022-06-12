@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
+
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
@@ -38,8 +39,9 @@ export default function EventCard() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
+    <Card sx={{ maxWidth: 345}}>
+
+      {/* <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
             R
@@ -52,13 +54,14 @@ export default function EventCard() {
         }
         title="Shrimp and Chorizo Paella"
         subheader="September 14, 2016"
-      />
+      /> */}
       <CardMedia
         component="img"
         height="194"
         image="/static/images/cards/paella.jpg"
         alt="Paella dish"
       />
+      <CardHeader title="Shrimp and Chorizo Paella" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           This impressive paella is a perfect party dish and a fun meal to cook

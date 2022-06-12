@@ -100,7 +100,7 @@ const Layout = (props) => {
             </Drawer>
           </Toolbar>
         </AppBar>
-        <main style={{ paddingTop: "60px" }}>{props.children}</main>
+        <main style={{ paddingTop: "4.3rem", paddingBottom: "4rem", minHeight:"52.3rem" }}>{props.children}</main>
 
         <footer className={classes.footer}>
           <Typography variant="h6" align="center" gutterBottom>
