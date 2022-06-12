@@ -6,26 +6,37 @@ import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 import Link from "next/link";
 import classes from "./Layout.module.css";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
+import HomeIcon from "@mui/icons-material/Home";
+import InfoIcon from "@mui/icons-material/Info";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import { IconButton } from "@mui/material";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { Drawer } from "@mui/material";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemIcon from "@mui/material/ListItemIcon";
 
 const Layout = (props) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
+  const router = useRouter();
   const navItems = [
     {
       title: "Home",
-      href: "/",
+      icon: <HomeIcon />,
+      path: "/",
     },
     {
       title: "About Us",
-      href: "/about",
+      icon: <InfoIcon />,
+      path: "/about",
     },
     {
       title: "Events",
-      href: "/events",
+      icon: <EmojiEventsIcon />,
+      path: "/events",
     },
   ];
 
@@ -51,7 +62,7 @@ const Layout = (props) => {
 
             <div className={classes.navItemsLg}>
               {navItems.map((item) => (
-                <Link href={item.href} key={item.title}>
+                <Link href={item.path} key={item.title}>
                   <Button
                     color="inherit"
                     edge="end"
@@ -69,29 +80,44 @@ const Layout = (props) => {
                 </Button>
               </Link>
             </div>
-            <IconButton size="large" edge="start" color="inherit" aria-label="logo" onClick={() => setIsDrawerOpen(true)} sx={{ display: { sx: "static", lg: "none" }}}>
+            {/* Mobile Navigation */}
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="logo"
+              onClick={() => setIsDrawerOpen(true)}
+              sx={{ display: { sx: "flex", lg: "none" } }}
+            >
               <MenuIcon />
             </IconButton>
             <Drawer
               anchor="right"
               open={isDrawerOpen}
               onClose={() => setIsDrawerOpen(false)}
-              sx={{ display: { sx: "static", md: "none" }}}
+              sx={{ display: { sx: "static", md: "none" } }}
             >
-              <Box p={2} textAlign="center" width='280px' role="presentation" sx={{ flexDirection: "column"}}>
-                {navItems.map((item) => (
-                  <Link href={item.href} key={item.title}>
-                    <Button
-                      color="inherit"
-                      edge="end"
-                      sx={{ mx: 1 }}
+              <Box
+                p={2}
+                textAlign="center"
+                width="280px"
+                role="presentation"
+                sx={{ flexDirection: "column" }}
+              >
+                <List>
+                  {navItems.map((item) => (
+                    <ListItem
+                      button
+                      key={item.title}
+                      onClick={() => router.push(item.path)}
                     >
-                      {item.title}
-                    </Button>
-                  </Link>
-                ))}
+                      <ListItemIcon>{item.icon}</ListItemIcon>
+                      <ListItemText primary={item.title} sx= {{ alignItems: "center" }} />
+                    </ListItem>
+                  ))}
+                </List>
                 <Link href="/contact">
-                  <Button edge="end" sx={{ mx: 1 }} variant="outlined">
+                  <Button edge="end" sx={{ mx: 1, my: 2 }} variant="outlined">
                     {" "}
                     Contact Us{" "}
                   </Button>
@@ -100,7 +126,9 @@ const Layout = (props) => {
             </Drawer>
           </Toolbar>
         </AppBar>
-        <main style={{ paddingTop: "60px" }}>{props.children}</main>
+        <main style={{ paddingTop: "60px", minHeight: "screen" }}>
+          {props.children}
+        </main>
 
         <footer className={classes.footer}>
           <Typography variant="h6" align="center" gutterBottom>
