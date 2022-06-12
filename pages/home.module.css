@@ -1,0 +1,39 @@
+.heroText {
+  margin-top: 2rem;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  -webkit-animation: btn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: btn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+  outline: 0;
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 2.5rem;
+  font-size: 15px;
+  font-weight: 100;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #4fe4ff;
+  background: #4fe4ff;
+  color: #000;
+  font-weight: 600;
+  transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+.button:hover {
+  background-color: #4fe4ff;
+  color: #000;
+  box-shadow: 0 0 5px #4fe4ff, 0 0 20px rgba(4, 217, 255, 1),
+    0 0 35px rgba(4, 217, 255, 0.7), 0 0 50px rgba(4, 217, 255, 0.6);
+  border-color: #fff;
+}

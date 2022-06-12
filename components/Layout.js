@@ -43,7 +43,7 @@ const Layout = (props) => {
 
   return (
     <>
-      <Box sx={{ background: "black" }}>
+      <Box className={classes.bG}>
         <AppBar position="fixed" className={classes.appBarBg}>
           <Toolbar>
             <Avatar
@@ -119,7 +119,7 @@ const Layout = (props) => {
                     <ListItem
                       button
                       key={item.title}
-                      onClick={() => router.push(item.path)}
+                      onClick={() => {router.push(item.path); setIsDrawerOpen(false)}}
                     >
                       <ListItemIcon>{item.icon}</ListItemIcon>
                       <ListItemText
@@ -143,7 +143,7 @@ const Layout = (props) => {
           style={{
             paddingTop: "4.3rem",
             paddingBottom: "4rem",
-            minHeight: "52.3rem",
+            minHeight: "55rem",
           }}
         >
           {props.children}
