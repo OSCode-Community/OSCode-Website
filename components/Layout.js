@@ -43,7 +43,7 @@ const Layout = (props) => {
 
   return (
     <>
-      <Box sx={{ background: "black" }}>
+      <Box className={classes.bG}>
         <AppBar position="fixed" className={classes.appBarBg}>
           <Toolbar>
             <Avatar

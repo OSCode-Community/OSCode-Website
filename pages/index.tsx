@@ -3,11 +3,13 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
+import classes from "./home.module.css";
+
 const Home = () => {
   return (
-    <Container maxWidth="lg">
+    <div className={classes.bgImage}>
       
-    </Container>
+    </div>
   );
 };
 
