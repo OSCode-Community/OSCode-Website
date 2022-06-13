@@ -11,17 +11,17 @@ const Events = () => {
     {
       title: "Event 1",
       description: "This is the description of event 1",
-      image: "https://source.unsplash.com/random",
+      image: "/headerbg.jpg",
     },
     {
       title: "Event 2",
       description: "This is the description of event 2",
-      image: "https://source.unsplash.com/random",
+      image: "/headerbg.jpg",
     },
     {
       title: "Event 3",
       description: "This is the description of event 3",
-      image: "https://source.unsplash.com/random",
+      image: "/headerbg.jpg",
     },
   ];
   return (
