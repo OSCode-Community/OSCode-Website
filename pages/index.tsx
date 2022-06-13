@@ -8,21 +8,21 @@ import Link from "@mui/material/Link";
 
 const Home = () => {
   return (
-    <Box my={20} ml={15}>
+    <Box my={20} px={10}>
       <Typography
         variant="h2"
         component="h1"
         className={classes.heroText}
-        sx={{ marginLeft: {} }}
+        sx={{ marginTop: { xs: "-6rem", lg: "0rem" }, fontSize: { xs: "3rem", sm: "5.2rem" }, paddingRight: { lg: "10rem" } }}
         gutterBottom
       >
-        A community of Open Source <br></br>
+        A community of Open Source
         developers
       </Typography>
       <Typography
         variant="h5"
         component="h2"
-        sx={{ marginLeft: {}, fontWeight: "lighter" }}
+        sx={{ paddingRight: { sm: "1.5rem" }, fontSize: {xs: "1.2rem"} ,fontWeight: "lighter" }}
         color="white"
         gutterBottom
       >
@@ -30,7 +30,7 @@ const Home = () => {
         tools.
       </Typography>
       <Link href="/events">
-        <Button className={classes.button}>Explore Events</Button>
+        <Button className={classes.button} sx= {{paddingX: {xs: "3rem" ,sm: "6rem"}, paddingY: {sm: "1rem"}}}>Explore Events</Button>
       </Link>
     </Box>
   );

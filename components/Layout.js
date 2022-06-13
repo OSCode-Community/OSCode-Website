@@ -143,7 +143,7 @@ const Layout = (props) => {
           style={{
             paddingTop: "4.3rem",
             paddingBottom: "4rem",
-            minHeight: "55rem",
+            minHeight: "65rem",
           }}
         >
           {props.children}
