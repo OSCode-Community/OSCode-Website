@@ -1,5 +1,4 @@
 .heroText {
-  margin-top: 2rem;
   background-color: #4158d0;
   background-image: linear-gradient(
     43deg,
@@ -18,13 +17,14 @@
   outline: 0;
   position: relative;
   display: inline-block;
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
   margin-top: 2.5rem;
   font-size: 15px;
   font-weight: 100;
   overflow: hidden;
   cursor: pointer;
   border: 2px solid #4fe4ff;
+  border-radius: 0px;
   background: #4fe4ff;
   color: #000;
   font-weight: 600;
