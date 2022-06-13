@@ -22,7 +22,7 @@ const Home = () => {
       <Typography
         variant="h5"
         component="h2"
-        sx={{ paddingRight: { sm: "1.5rem" }, fontSize: {xs: "1.2rem"} ,fontWeight: "lighter" }}
+        sx={{ paddingRight: { sm: "1.5rem" }, fontSize: {xs: "1.2rem", sm: "1.8rem", lg: "1.5rem"} ,fontWeight: "lighter" }}
         color="white"
         gutterBottom
       >
