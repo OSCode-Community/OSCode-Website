@@ -39,7 +39,7 @@
     0 0 20px rgba(255, 0, 60, 0.5), 0 0 40px #ff003c, 0 0 100px #ff003c,
     0 0 200px #ff003c, 0 0 300px #ff003c, 0 0 500px #ff003c, 0 0 1000px #ff003c;
   -webkit-animation: blink 4s infinite alternate;
-  animation: buzz 0.01s infinite alternate;
+  animation: blink 2s infinite alternate;
 
 }
 @font-face {
