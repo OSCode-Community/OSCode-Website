@@ -75,7 +75,7 @@ const Layout = (props) => {
                 </Link>
               ))}
               <Link href="/contact">
-                <Button edge="end" sx={{ mx: 1 }} variant="outlined">
+                <Button edge="end" sx={{ mx: 1 }} variant="contained">
                   {" "}
                   Contact Us{" "}
                 </Button>

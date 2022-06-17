@@ -41,7 +41,7 @@ export default function EventCard(props: {
       <CardMedia
         component="img"
         alt="event image"
-        height="300"
+        height="350"
         image={props.image}
       />
       <CardContent>
@@ -51,8 +51,8 @@ export default function EventCard(props: {
         <Typography variant="body2">{props.description}</Typography>
       </CardContent>
       <CardActions sx={{paddingTop: "2rem"}}>
-        <Button size="small">Register</Button>
-        <Button size="small">Rules</Button>
+        <Button size="small" className={classes.btn}>Register</Button>
+        <Button size="small" className={classes.btn}>Rules</Button>
       </CardActions>
     </Card>
   );
