@@ -9,19 +9,19 @@ import EventCard from "../../components/EventCard";
 const Events = () => {
   const events = [
     {
-      title: "Event 1",
+      title: "Bubble Wrestling",
       description: "This is the description of event 1",
-      image: "/headerbg.jpg",
+      image: "/bubble.png",
     },
     {
-      title: "Event 2",
+      title: "Crack The Code",
       description: "This is the description of event 2",
-      image: "/headerbg.jpg",
+      image: "/crack.png",
     },
     {
-      title: "Event 3",
+      title: "RC Car Racing",
       description: "This is the description of event 3",
-      image: "/headerbg.jpg",
+      image: "/rc.png",
     },
   ];
   return (

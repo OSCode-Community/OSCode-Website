@@ -4,6 +4,7 @@
   -webkit-backdrop-filter: blur(11px);
   border-radius: 20px;
   color: aliceblue;
+  padding-bottom: 2rem;
 }
 .eventCardBg:hover {
   background-color: #4fe4ff;
@@ -11,4 +12,8 @@
   box-shadow: 0 0 5px #4fe4ff, 0 0 20px rgba(4, 217, 255, 1),
     0 0 35px rgba(4, 217, 255, 0.7), 0 0 50px rgba(4, 217, 255, 0.6);
   border-color: #fff;
+}
+
+.btn{
+  color: #A149FA;
 }
